@@ -35,19 +35,19 @@ int main(int argc, char *argv[])
     WorkingXML xmlWork;
 
     QList<Books> BookStore ;
-    QString nameFile = "/home/actiso/QT_project/library/books.xml";
-//    BookStore = xmlWork.read_bookself(nameFile);
+    QString nameFile = "/home/actiso/QT_project/library/bookuser1.xml";
+    BookStore = xmlWork.read_bookself(nameFile);
                 //        status = xmlWork.write_bookself(book1);
-    status = xmlWork.write_bookself(book1,nameFile);
+//    status = xmlWork.write_bookself(book1,nameFile);
 //    status = xmlWork.write_bookself(book3);
 
 //    if(BookStore==NULL){
 //        qDebug() << "Error assign QList Value";
 //    }
-//    QList<Books>::iterator id;
-//    for (id =BookStore.begin();id != BookStore.end();id++){
-//        qDebug()<<"Name of book\n"<<id->get_BookName()<<"\n";
-//    }
+    QList<Books>::iterator id;
+    for (id =BookStore.begin();id != BookStore.end();id++){
+        qDebug()<<"Name of book\n"<<id->get_BookName()<<"\n";
+    }
 
 
 //    return a.exec();

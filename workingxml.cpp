@@ -37,6 +37,12 @@ QList<Books> WorkingXML::read_bookself(QString &fileName){
 int WorkingXML::write_bookself(Books &book,QString& xmlName){
 
     QDomDocument myDocument;
+    QString bookPattern = "/home/actiso/QT_project/library/bookuser.xml";
+    QString bookself ="/home/actiso/QT_project/library/books.xml";
+    QFile Object;
+    if(xmlName !=bookself){
+        Object.copy(bookPattern,xmlName);
+    }
     QFile file(xmlName);
     if(!file.open(QIODevice::ReadOnly | QIODevice::Text)){
         qDebug()<<"Error when open File xml";
