@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -17,12 +18,14 @@ SOURCES += main.cpp\
     person.cpp \
     user.cpp \
     admin.cpp \
-    books.cpp
+    books.cpp \
+    workingxml.cpp
 
 HEADERS  += mainwindow.h \
     person.h \
     user.h \
     admin.h \
-    books.h
+    books.h \
+    workingxml.h
 
 FORMS    += mainwindow.ui

@@ -1,0 +1,6 @@
+<root>
+ <book Status="Yes" Author="Phan Huy Khai" Code="TVDT-03XYZ" Type="Math" Name="Giai tich 12" Location="3th floor"/>
+ <book Status="Yes" Author="Phan Huy Khai" Code="TVDT-03XYZ" Type="Math" Name="Giai tich 12" Location="3th floor"/>
+ <book Status="Yes" Author="Phan Huy Khai" Code="TVDT-03XYZ" Type="Math" Name="Giai tich 12" Location="3th floor"/>
+ <book Status="Yes" Author="Phan Huy Khai" Type="Math" Code="TVDT-03XYZ" Name="Giai tich 12" Location="3th floor"/>
+</root>
