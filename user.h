@@ -14,10 +14,12 @@ public:
     void add_UserName(QString vUserName1);
     void add_PassWord(QString vPassWord1);
     void add_UserBooks(const Books& book);
+    void add_BookBag(QString bagBook);
     QString get_StudentCode();
     QString get_Class();
     QString get_UserName();
     QString get_PassWord();
+    QString get_BookBag();
     QList<Books> get_Userbooks();
 private:
     QString vStudentCode;
@@ -25,6 +27,7 @@ private:
     QList<Books> userBooks;
     QString vUserName;
     QString vPassWord;
+    QString vBookBag;
 
 };
 

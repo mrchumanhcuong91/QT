@@ -27,6 +27,9 @@ void User::add_PassWord(QString vPassWord1){
 void User::add_UserBooks(const Books& book){
     userBooks.append(book);
 }
+void User::add_BookBag(QString bagBook){
+    vBookBag = bagBook;
+}
 
 QString User::get_StudentCode(){
     return vStudentCode;
@@ -42,6 +45,9 @@ QString User::get_UserName(){
 
 QString User::get_PassWord(){
     return vPassWord;
+}
+QString User::get_BookBag(){
+    return vBookBag;
 }
 
 QList<Books> User::get_Userbooks(){

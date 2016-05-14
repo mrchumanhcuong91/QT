@@ -4,7 +4,7 @@
 #include<QString>
 class Person
 {
-private:
+protected:
     QString vName;
     int vAge;
     QString vSex;

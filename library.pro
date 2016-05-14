@@ -19,13 +19,21 @@ SOURCES += main.cpp\
     user.cpp \
     admin.cpp \
     books.cpp \
-    workingxml.cpp
+    workingxml.cpp \
+    system_library.cpp \
+    dialogregister.cpp \
+    dialoglogin.cpp
 
 HEADERS  += mainwindow.h \
     person.h \
     user.h \
     admin.h \
     books.h \
-    workingxml.h
+    workingxml.h \
+    system_library.h \
+    dialogregister.h \
+    dialoglogin.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    dialogregister.ui \
+    dialoglogin.ui

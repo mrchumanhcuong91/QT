@@ -1,0 +1,14 @@
+<root>
+ <book Author="Phan Huy Khai" Name="Giai tich 12" Type="Math" Code="TVDT-03XYZ" Location="3th floor" Status="Yes"/>
+ <book Author="Phan Huy Khai" Name="Giai tich 12" Type="Math" Code="TVDT-03XYZ" Location="3th floor" Status="Yes"/>
+ <book Author="Phan Huy Khai" Name="Giai tich 12" Type="Math" Code="TVDT-03XYZ" Location="3th floor" Status="Yes"/>
+ <book Author="Nguyen Thi Lieu" Name="Hoa Hoc 12" Type="Math" Code="TVDT-03XYZ" Location="3th floor" Status="Yes"/>
+ <book Author="Chu Manh Cuong" Name="Toan Hoc 9" Type="Math" Code="TVDT-03XYZ" Location="3th floor" Status="Yes"/>
+ <book Author="Nguyen Van Chanh" Name="Sinh Hoc 12" Type="Math" Code="TVDT-03XYZ" Location="3th floor" Status="Yes"/>
+ <book Author="Doan Van Linh" Name="Tinh Duc Hoc 12" Type="Math" Code="TVDT-03XYZ" Location="3th floor" Status="Yes"/>
+ <book Author="Nguyen Khac Kieu" Name="Van Hoc 12" Type="Math" Code="TVDT-03XYZ" Location="3th floor" Status="Yes"/>
+ <book Author="Nguyen Thi Thu" Name="Vat Ly Hoc 12" Type="Math" Code="TVDT-03XYZ" Location="3th floor" Status="Yes"/>
+ <book Author="Nguyen Thi Lieu" Name="Hoa Hoc 12" Type="Math" Code="TVDT-03XYZ" Location="3th floor" Status="Yes"/>
+ <book Author="Nguyen Thi Lieu" Name="Hoa Hoc 12" Type="Math" Code="TVDT-03XYZ" Location="3th floor" Status="Yes"/>
+
+</root>
