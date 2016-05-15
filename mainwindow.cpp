@@ -147,10 +147,10 @@ void MainWindow::on_bRemoveYourBooks_clicked()
 
 void MainWindow::on_bHelp_clicked()
 {
-//      delete this->item;
-//      delete &(this->user);
-//      delete this->myWidget;
-//      delete this->yourBooks;
+//   delete this->item;
+//   delete &(this->user);
+//   delete this->myWidget;
+//   delete this->yourBooks;
     ui->bBorrows->setEnabled(false);
     ui->bYourBooks->setEnabled(false);
     ui->bViewBooks->setEnabled(false);
