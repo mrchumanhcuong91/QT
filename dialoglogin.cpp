@@ -14,9 +14,7 @@ DialogLogin::~DialogLogin()
 {
     delete ui;
 }
-//void DialogLogin::add_user(User &userCache){
-//    user = userCache;
-//}
+
 void DialogLogin::on_bLogin_clicked()
 {
     QString InputUserName = ui->mEditUserName->text();

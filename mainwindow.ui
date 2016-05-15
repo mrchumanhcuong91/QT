@@ -62,7 +62,7 @@
      <item>
       <widget class="QPushButton" name="bHelp">
        <property name="text">
-        <string>Help ?</string>
+        <string>Logout</string>
        </property>
       </widget>
      </item>
@@ -97,7 +97,7 @@
      <rect>
       <x>330</x>
       <y>70</y>
-      <width>67</width>
+      <width>171</width>
       <height>17</height>
      </rect>
     </property>
@@ -115,6 +115,16 @@
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayoutControl">
+     <item>
+      <widget class="QPushButton" name="bYourBooks">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>YourBooks</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QPushButton" name="bViewBooks">
        <property name="enabled">
@@ -163,20 +173,36 @@
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="bFindAdvance">
+   <widget class="QPushButton" name="bBorrows">
     <property name="enabled">
      <bool>false</bool>
     </property>
     <property name="geometry">
      <rect>
-      <x>700</x>
-      <y>60</y>
-      <width>91</width>
+      <x>570</x>
+      <y>450</y>
+      <width>99</width>
       <height>27</height>
      </rect>
     </property>
     <property name="text">
-     <string>Advance</string>
+     <string>Borrows</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bRemoveYourBooks">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>450</y>
+      <width>99</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Remove</string>
     </property>
    </widget>
    <zorder>layoutWidget</zorder>
@@ -185,7 +211,8 @@
    <zorder>verticalLayoutWidget</zorder>
    <zorder>label_Hi</zorder>
    <zorder>verticalLayoutWidget_2</zorder>
-   <zorder>bFindAdvance</zorder>
+   <zorder>bBorrows</zorder>
+   <zorder>bRemoveYourBooks</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

@@ -30,12 +30,25 @@ private slots:
 
     void on_bsearchBooks_clicked();
 
+    void on_bBorrows_clicked();
+
+    void on_bYourBooks_clicked();
+
+    void on_bRemoveYourBooks_clicked();
+
+    void on_bHelp_clicked();
+
 public slots:
     void display_button();
     void recieve_user(User& user);
+    void ItemListWidget_click(QListWidgetItem* item);
+    void ItemListYourBooks_click(QListWidgetItem* item);
 private:
     User user;
+    QString nameItem;
     QListWidget *myWidget;
+    QListWidget *yourBooks;
+    QListWidgetItem *item;
     Ui::MainWindow *ui;
     DialogRegister *Register;
     DialogLogin *mDialogLogin;
