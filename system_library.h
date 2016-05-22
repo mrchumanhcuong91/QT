@@ -19,6 +19,7 @@ public:
     bool logout_account(User& user);
     QList<Books> viewBook(QString& fileNameBooks);
     bool static searchBook(QString& bookName,Books* book);
+    bool static getBookFromBookself(QList<QString>& bookName,Books* book);
     bool Admin_add_Book(Books& bookAdd,QString& store);
     bool Admin_removeBook(Books& bookNameRemove);
     bool borrowBook(Books& bookNameBorrow,QString& userBag);

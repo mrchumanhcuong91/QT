@@ -38,6 +38,10 @@ private slots:
 
     void on_bHelp_clicked();
 
+//    void on_pushButton_clicked();
+
+    void on_bSend_clicked();
+
 public slots:
     void display_button();
     void recieve_user(User& user);

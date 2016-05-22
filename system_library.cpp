@@ -73,7 +73,28 @@ bool system_library::searchBook(QString &bookName, Books *book){
         }
     return checkResult;
     }
-
+bool system_library::getBookFromBookself(QList<QString>& bookName, Books *book){
+    QString fileName = "/home/actiso/QT_project/library/books.xml";
+    // check if duplicate
+    bool checkResult =false;
+    QList<Books> booklist;
+    booklist = WorkingXML::read_bookself(fileName);
+    QList<Books>::iterator points;
+    QList<QString>::iterator bookPoint;
+    for(bookPoint=bookName.begin();bookPoint!=bookName.end();bookPoint++)
+    {
+        for(points=booklist.begin();points!=booklist.end();points++)
+            {
+            if(*bookPoint == points->get_BookName()){
+               *book =*points;
+//                qDebug()<<book->get_BookName();
+                checkResult =true;
+                book++;
+            }
+        }
+    }
+    return checkResult;
+}
 
 bool system_library::Admin_add_Book(Books &bookAdd, QString& store){
     if(WorkingXML::write_bookself(bookAdd,store)==-1){

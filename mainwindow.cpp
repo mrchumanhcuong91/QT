@@ -33,6 +33,10 @@ MainWindow::MainWindow(QWidget *parent) :
 }
 MainWindow::~MainWindow()
 {
+    delete this->item;
+    delete &(this->user);
+    delete this->yourBooks;
+    delete this->myWidget;
     delete ui;
 }
 //void MainWindow::add_data_for_User(User &userdata){
@@ -51,12 +55,16 @@ void MainWindow::recieve_user(User &user){
     if(user.get_Name()!=""){
         this->user =user;
         ui->label_Hi->setText("Welcome "+ user.get_Name());
-        ui->label_Hi->setStyleSheet("QLabel { background-color : blue; color : red; }");
+        ui->label_Hi->setStyleSheet("QLabel { background-color : white; color : green; }");
         ui->label_Hi->show();
+        ui->bBorrows->show();
+        ui->bYourBooks->show();
+        ui->bViewBooks->show();
+        ui->bRemoveYourBooks->show();
         ui->bViewBooks->setEnabled(true);
         ui->bsearchBooks->setEnabled(true);
         ui->bYourBooks->setEnabled(true);
-
+        ui->bsearchBooks->setEnabled(true);
         //ui->bFindAdvance->setEnabled(true);
 
 
@@ -101,11 +109,21 @@ void MainWindow::on_bsearchBooks_clicked()
 {
     Books *bookSearch = new Books[100];
     QString nameBook =ui->lineEditSearch->text();
-    if(!system_library::searchBook(nameBook,bookSearch)){
-       QMessageBox::information(this,"Message","Not Found");
+    if(nameBook == NULL) {
+       QMessageBox::information(this,"Message","Please add your search");
     }else{
-        if(this->myWidget->count()!=0){
-            this->myWidget->clear();
+        if(!system_library::searchBook(nameBook,bookSearch)){
+           QMessageBox::information(this,"Message","Not Found");
+        }else{
+            if(this->myWidget->count()!=0){
+                this->myWidget->clear();
+            }
+            ui->vUserdisplay->removeWidget(this->myWidget);
+            while(bookSearch->get_BookName() !=""){
+                this->myWidget->addItem(bookSearch->get_BookName());
+                bookSearch++;
+            }
+            ui->vUserdisplay->addWidget(this->myWidget);
         }
         ui->vUserdisplay->removeWidget(this->myWidget);
         while(bookSearch->get_BookName() !=""){
@@ -147,12 +165,27 @@ void MainWindow::on_bRemoveYourBooks_clicked()
 
 void MainWindow::on_bHelp_clicked()
 {
-//      delete this->item;
-//      delete &(this->user);
-//      delete this->myWidget;
-//      delete this->yourBooks;
-    ui->bBorrows->setEnabled(false);
-    ui->bYourBooks->setEnabled(false);
-    ui->bViewBooks->setEnabled(false);
-    ui->bRemoveYourBooks->setEnabled(false);
+    this->yourBooks->clear();
+    this->myWidget->clear();
+    ui->vUserdisplay->removeWidget(this->myWidget);
+    ui->vUserdisplay->removeWidget(this->yourBooks);
+    ui->bBorrows->hide();
+    ui->bYourBooks->hide();
+    ui->bViewBooks->hide();
+    ui->bRemoveYourBooks->hide();
+    ui->bsearchBooks->setEnabled(false);
+    ui->label_Hi->setText("Disable");
+    ui->label_Hi->setStyleSheet("QLabel { background-color : blue; color : red; }");
+    ui->label_Hi->show();
+}
+
+void MainWindow::on_bSend_clicked()
+{
+    qDebug() <<"cuongcm";
+    QList<QString> listBooksBorrow;
+    for(int i=0;i<this->yourBooks->count();i++){
+        listBooksBorrow.push_back(this->yourBooks->item(i)->text());
+        qDebug() <<this->yourBooks->item(i)->text();
+    }
+
 }

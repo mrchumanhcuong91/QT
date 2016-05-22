@@ -205,6 +205,19 @@
      <string>Remove</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="bSend">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>470</y>
+      <width>99</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Send</string>
+    </property>
+   </widget>
    <zorder>layoutWidget</zorder>
    <zorder>horizontalLayoutWidget</zorder>
    <zorder>label</zorder>
@@ -213,6 +226,7 @@
    <zorder>verticalLayoutWidget_2</zorder>
    <zorder>bBorrows</zorder>
    <zorder>bRemoveYourBooks</zorder>
+   <zorder>bSend</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
