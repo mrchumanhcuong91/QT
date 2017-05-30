@@ -11,7 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = library
 TEMPLATE = app
-
+CONFIG += debug
 
 SOURCES += main.cpp\
         mainwindow.cpp \

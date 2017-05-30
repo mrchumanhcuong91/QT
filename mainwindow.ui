@@ -90,7 +90,20 @@
       <height>311</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="vUserdisplay"/>
+    <layout class="QVBoxLayout" name="vUserdisplay">
+     <item>
+      <widget class="QTreeWidget" name="treeWidgetBookView">
+       <property name="midLineWidth">
+        <number>-3</number>
+       </property>
+       <column>
+        <property name="text">
+         <string notr="true">1</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
    </widget>
    <widget class="QLabel" name="label_Hi">
     <property name="geometry">

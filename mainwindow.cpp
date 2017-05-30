@@ -187,5 +187,10 @@ void MainWindow::on_bSend_clicked()
         listBooksBorrow.push_back(this->yourBooks->item(i)->text());
         qDebug() <<this->yourBooks->item(i)->text();
     }
+    listBooksBorrow.push_back(this->user.get_Name());
+    listBooksBorrow.push_back(this->user.get_Class());
+    listBooksBorrow.push_back(this->user.get_StudentCode());
+    //send data to server
+
 
 }
